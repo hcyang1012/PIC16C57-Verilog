@@ -1,0 +1,46 @@
+008     @SCRATCH
+009     @SCRATCH
+009     _RETURN_
+00B     main.portA
+00C     main.portC
+00D     main.portB
+00E     main.oldKeyValue
+00F-012 main.curPassWD
+013-016 main.savPassWD
+017-01A main.keypadPassWd
+01B     main.oldAVR
+01C     main.currentIndex
+01D     main.currentKeyIndex
+01E     main.@SCRATCH1
+
+ROM Allocation:
+0001  main
+0001  @cinit
+
+
+Project Directory:
+    D:\project\verilog_term\C_Code\
+
+Project Files:
+    Term.c
+
+Units:
+    D:\project\verilog_term\C_Code\Term.c (main)
+
+Compiler Settings:
+    Processor:      PIC16C57
+    Pointer Size:   5
+    Opt Level:      0
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      Term.err
+    Ext Symbols: Term.esym
+    Binary:      Term.hex
+    Symbols:     Term.sym
+    List/Opcode: Term.lst
+    Debug/COFF:  Term.cof
+    Project:     Term.PJT
+    Call Tree:   Term.tre
+    Statistics:  Term.sta

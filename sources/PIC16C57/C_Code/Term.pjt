@@ -1,0 +1,51 @@
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\;
+Library=
+LinkerScript=
+[defines]
+enabled=0
+D1=
+V1=
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=2
+list=1
+scratch=0
+sta=1
+tre=1
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+[PROJECT]
+Target=Term.hex
+Development_Mode=
+Processor=0x6C57
+Processor_Text=PIC16C57
+ToolSuite=CCS
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FB
+AdditionalOptionString=
+BuildRequired=1
+[Term.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=Term.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Units]
+Link=0
+Count=1
+1=Term.c
+[Opened Files]
+1=Term.lst
+2=Term.c
+3=

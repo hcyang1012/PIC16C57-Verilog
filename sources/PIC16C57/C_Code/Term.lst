@@ -1,0 +1,254 @@
+MPASM
+
+CCS PCB C Compiler, Version 4.093, 5967               16-12-12 15:28
+
+               Filename: D:\project\verilog_term\C_Code\Term.lst
+
+               ROM used: 132 words (6%)
+                         Largest free fragment is 512
+               RAM used: 22 (92%) at main() level
+                         22 (92%) worst case
+               Stack:    0 locations
+
+0000 0A01       00001 GOTO   001
+07FF 0A00       00002 GOTO   000
+                00003 .................... #device PIC16C57 
+                00004 ....................  
+                00005 .................... #define PORTA_DATA *(unsigned char*)0x05 
+                00006 .................... #define PORTB_DATA *(unsigned char*)0x06 
+                00007 .................... #define PORTC_DATA *(unsigned char*)0x07 
+                00008 ....................  
+                00009 .................... int main() 
+                00010 .................... { 
+0001 0064       00011 CLRF   04
+                00012 ....................    unsigned char portA, portC , portB = 0xFF; 
+0002 0CFF       00013 MOVLW  FF
+0003 002D       00014 MOVWF  0D
+                00015 ....................    unsigned char oldKeyValue = 0xFF; 
+0004 0CFF       00016 MOVLW  FF
+0005 002E       00017 MOVWF  0E
+                00018 ....................     
+                00019 ....................    unsigned char curPassWD[4] = {0x00, 0x01, 0x02, 0x03}; 
+0006 006F       00020 CLRF   0F
+0007 0C01       00021 MOVLW  01
+0008 0030       00022 MOVWF  10
+0009 0C02       00023 MOVLW  02
+000A 0031       00024 MOVWF  11
+000B 0C03       00025 MOVLW  03
+000C 0032       00026 MOVWF  12
+                00027 ....................    unsigned char savPassWD[4] = {0x00, 0x00, 0x00, 0x00};  
+000D 0073       00028 CLRF   13
+000E 0074       00029 CLRF   14
+000F 0075       00030 CLRF   15
+0010 0076       00031 CLRF   16
+                00032 ....................    unsigned char keypadPassWd[4] = {0x00, 0x00, 0x00, 0x00};  
+0011 0077       00033 CLRF   17
+0012 0078       00034 CLRF   18
+0013 0079       00035 CLRF   19
+0014 007A       00036 CLRF   1A
+                00037 ....................    unsigned char oldAVR = 0xFF; 
+0015 0CFF       00038 MOVLW  FF
+0016 003B       00039 MOVWF  1B
+                00040 ....................    int currentIndex = 0; 
+0017 007C       00041 CLRF   1C
+                00042 ....................    int currentKeyIndex = 0; 
+0018 007D       00043 CLRF   1D
+                00044 ....................     
+                00045 ....................    #asm 
+                00046 ....................       MOVLW 0xFF 
+0019 0CFF       00047 MOVLW  FF
+                00048 ....................       TRIS  5  //PORTA  :Input   // keyPAD 
+001A 0005       00049 TRIS   5
+                00050 ....................       TRIS  6  //PORTB  :Input   // AVR 
+001B 0006       00051 TRIS   6
+                00052 ....................       MOVLW 0x00 
+001C 0C00       00053 MOVLW  00
+                00054 ....................       TRIS  7  //PORC   :Output  //  
+001D 0007       00055 TRIS   7
+                00056 ....................    #endasm 
+                00057 ....................    portB = 0xFF; 
+001E 0CFF       00058 MOVLW  FF
+001F 002D       00059 MOVWF  0D
+                00060 ....................    do 
+                00061 ....................    { 
+                00062 ....................       portA = PORTA_DATA; 
+0020 0205       00063 MOVF   05,W
+0021 002B       00064 MOVWF  0B
+                00065 ....................       portB = PORTB_DATA;      
+0022 0206       00066 MOVF   06,W
+0023 002D       00067 MOVWF  0D
+                00068 ....................       portC = (portA & 0xFF); 
+0024 020B       00069 MOVF   0B,W
+0025 002C       00070 MOVWF  0C
+                00071 ....................        
+                00072 ....................       if(oldKeyValue != portC) 
+0026 020C       00073 MOVF   0C,W
+0027 008E       00074 SUBWF  0E,W
+0028 0643       00075 BTFSC  03.2
+0029 0A4F       00076 GOTO   04F
+                00077 ....................       { 
+                00078 ....................          oldKeyValue = portC; 
+002A 020C       00079 MOVF   0C,W
+002B 002E       00080 MOVWF  0E
+                00081 ....................  
+                00082 ....................           
+                00083 ....................          switch(portC) 
+                00084 ....................          { 
+002C 020C       00085 MOVF   0C,W
+002D 0F0F       00086 XORLW  0F
+002E 0643       00087 BTFSC  03.2
+002F 0A34       00088 GOTO   034
+0030 0F05       00089 XORLW  05
+0031 0643       00090 BTFSC  03.2
+0032 0A35       00091 GOTO   035
+0033 0A40       00092 GOTO   040
+                00093 ....................             case 0x0F: 
+                00094 ....................                break; 
+0034 0A4F       00095 GOTO   04F
+                00096 ....................             case 0x0A: 
+                00097 ....................                curPassWD[0] = keypadPassWd[0]; 
+0035 0217       00098 MOVF   17,W
+0036 002F       00099 MOVWF  0F
+                00100 ....................                curPassWD[1] = keypadPassWd[1]; 
+0037 0218       00101 MOVF   18,W
+0038 0030       00102 MOVWF  10
+                00103 ....................                curPassWD[2] = keypadPassWd[2]; 
+0039 0219       00104 MOVF   19,W
+003A 0031       00105 MOVWF  11
+                00106 ....................                curPassWD[3] = keypadPassWd[3]; 
+003B 021A       00107 MOVF   1A,W
+003C 0032       00108 MOVWF  12
+                00109 ....................                currentKeyIndex = 0; continue; 
+003D 007D       00110 CLRF   1D
+003E 0A81       00111 GOTO   081
+                00112 ....................                break; 
+003F 0A4F       00113 GOTO   04F
+                00114 ....................             default: 
+                00115 ....................                keypadPassWd[currentKeyIndex] = portC; 
+0040 0C17       00116 MOVLW  17
+0041 01DD       00117 ADDWF  1D,W
+0042 0024       00118 MOVWF  04
+0043 020C       00119 MOVF   0C,W
+0044 0020       00120 MOVWF  00
+                00121 ....................                PORTC_DATA = keypadPassWd[currentKeyIndex]; 
+0045 0C17       00122 MOVLW  17
+0046 01DD       00123 ADDWF  1D,W
+0047 0024       00124 MOVWF  04
+0048 0200       00125 MOVF   00,W
+0049 0027       00126 MOVWF  07
+                00127 ....................                currentKeyIndex = (currentKeyIndex + 1) % 4; 
+004A 0C01       00128 MOVLW  01
+004B 01DD       00129 ADDWF  1D,W
+004C 0E03       00130 ANDLW  03
+004D 003D       00131 MOVWF  1D
+                00132 ....................                break; 
+004E 0A4F       00133 GOTO   04F
+                00134 ....................          } 
+                00135 ....................       } 
+                00136 ....................  
+                00137 ....................       if(portB != oldAVR) 
+004F 021B       00138 MOVF   1B,W
+0050 008D       00139 SUBWF  0D,W
+0051 0643       00140 BTFSC  03.2
+0052 0A81       00141 GOTO   081
+                00142 ....................       { 
+                00143 ....................          oldAVR = portB; 
+0053 020D       00144 MOVF   0D,W
+0054 003B       00145 MOVWF  1B
+                00146 ....................          switch(portB) 
+                00147 ....................          { 
+0055 020D       00148 MOVF   0D,W
+0056 0FFF       00149 XORLW  FF
+0057 0643       00150 BTFSC  03.2
+0058 0A5D       00151 GOTO   05D
+0059 0FD5       00152 XORLW  D5
+005A 0643       00153 BTFSC  03.2
+005B 0A5E       00154 GOTO   05E
+005C 0A75       00155 GOTO   075
+                00156 ....................             case 0xFF: 
+                00157 ....................                break; 
+005D 0A81       00158 GOTO   081
+                00159 ....................             case '*': 
+                00160 ....................                if(curPassWD[0] == savPassWD[0] && 
+                00161 ....................                   curPassWD[1] == savPassWD[1] && 
+                00162 ....................                   curPassWD[2] == savPassWD[2] && 
+                00163 ....................                   curPassWD[3] == savPassWD[3]) { 
+005E 0213       00164 MOVF   13,W
+005F 008F       00165 SUBWF  0F,W
+0060 0743       00166 BTFSS  03.2
+0061 0A71       00167 GOTO   071
+0062 0214       00168 MOVF   14,W
+0063 0090       00169 SUBWF  10,W
+0064 0743       00170 BTFSS  03.2
+0065 0A71       00171 GOTO   071
+0066 0215       00172 MOVF   15,W
+0067 0091       00173 SUBWF  11,W
+0068 0743       00174 BTFSS  03.2
+0069 0A71       00175 GOTO   071
+006A 0216       00176 MOVF   16,W
+006B 0092       00177 SUBWF  12,W
+006C 0743       00178 BTFSS  03.2
+006D 0A71       00179 GOTO   071
+                00180 ....................                      PORTC_DATA = 0xFF; 
+006E 0CFF       00181 MOVLW  FF
+006F 0027       00182 MOVWF  07
+                00183 ....................                   } 
+                00184 ....................                else 
+0070 0A72       00185 GOTO   072
+                00186 ....................                  PORTC_DATA = 0x00; 
+0071 0067       00187 CLRF   07
+                00188 ....................                currentIndex = 0; continue; 
+0072 007C       00189 CLRF   1C
+0073 0A81       00190 GOTO   081
+                00191 ....................                break; 
+0074 0A81       00192 GOTO   081
+                00193 ....................             default: 
+                00194 ....................                portB = portB - '0'; 
+0075 0C30       00195 MOVLW  30
+0076 00AD       00196 SUBWF  0D,F
+                00197 ....................                savPassWD[currentIndex] = portB; 
+0077 0C13       00198 MOVLW  13
+0078 01DC       00199 ADDWF  1C,W
+0079 0024       00200 MOVWF  04
+007A 020D       00201 MOVF   0D,W
+007B 0020       00202 MOVWF  00
+                00203 ....................                currentIndex = (currentIndex + 1) % 4; 
+007C 0C01       00204 MOVLW  01
+007D 01DC       00205 ADDWF  1C,W
+007E 0E03       00206 ANDLW  03
+007F 003C       00207 MOVWF  1C
+                00208 ....................                break; 
+0080 0A81       00209 GOTO   081
+                00210 ....................          } 
+                00211 ....................       } 
+                00212 ....................     
+                00213 ....................    }while(1); 
+                00214 ....................     
+                00215 ....................    return 0; 
+0081 0A20       00216 GOTO   020
+0082 0C00       00217 MOVLW  00
+0083 0029       00218 MOVWF  09
+                00219 .................... } 
+0084 0003       0220 SLEEP
+
+Configuration Fuses:
+   Word  1: 0FFB   RC NOWDT NOPROTECT
+
+SYMBOL TABLE
+  LABEL                             VALUE
+
+_RETURN_                          00000009
+main.portA                        0000000B
+main.portC                        0000000C
+main.portB                        0000000D
+main.oldKeyValue                  0000000E
+main.curPassWD                    0000000F
+main.savPassWD                    00000013
+main.keypadPassWd                 00000017
+main.oldAVR                       0000001B
+main.currentIndex                 0000001C
+main.currentKeyIndex              0000001D
+Allocation:                       0000EEEF
+main                              00000001
+
+MEMORY USAGE

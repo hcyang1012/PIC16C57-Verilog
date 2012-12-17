@@ -1,0 +1,43 @@
+
+ROM used: 132 (6%)
+          132 (6%) including unused fragments
+
+          2 Average locations per line
+          3 Average locations per statement
+
+RAM used: 22 (92%) at main() level
+          22 (92%) worst case
+
+Stack used: 0 worst case (out of 2 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   87    40 100  Term.c
+----- -----
+   87    40 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0    132 100  20  2328 14.4  main
+
+Program metrics:
+    Functions               1
+    Statements              40
+    Comments                3
+    Volume (V)              2328
+    Difficilty (D)          14.4
+    Effort to implement (E) 33519
+    Time to implement (T)   31 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   10
+    Maintainability (MI)    91
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-001FF   132  379  
+00200-003FF     0  512  
+00400-005FF     0  512  
+00600-007FF     0  512  
+
+
+

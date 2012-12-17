@@ -1,0 +1,2 @@
+module Register4Bit(out, in, en, clk, rst);
+endmodule

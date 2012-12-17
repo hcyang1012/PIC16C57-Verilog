@@ -1,0 +1,1301 @@
+TimeQuest Timing Analyzer report for Term_4_2
+Fri Dec 07 20:14:12 2012
+Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Setup: 'clk'
+ 13. Slow Model Hold: 'clk'
+ 14. Slow Model Minimum Pulse Width: 'clk'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Output Enable Times
+ 20. Minimum Output Enable Times
+ 21. Output Disable Times
+ 22. Minimum Output Disable Times
+ 23. Fast Model Setup Summary
+ 24. Fast Model Hold Summary
+ 25. Fast Model Recovery Summary
+ 26. Fast Model Removal Summary
+ 27. Fast Model Minimum Pulse Width Summary
+ 28. Fast Model Setup: 'clk'
+ 29. Fast Model Hold: 'clk'
+ 30. Fast Model Minimum Pulse Width: 'clk'
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Output Enable Times
+ 36. Minimum Output Enable Times
+ 37. Output Disable Times
+ 38. Minimum Output Disable Times
+ 39. Multicorner Timing Analysis Summary
+ 40. Setup Times
+ 41. Hold Times
+ 42. Clock to Output Times
+ 43. Minimum Clock to Output Times
+ 44. Setup Transfers
+ 45. Hold Transfers
+ 46. Report TCCS
+ 47. Report RSKM
+ 48. Unconstrained Paths
+ 49. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                     ;
++--------------------+--------------------------------------------------+
+; Quartus II Version ; Version 12.1 Build 177 11/07/2012 SJ Web Edition ;
+; Revision Name      ; Term_4_2                                         ;
+; Device Family      ; Cyclone II                                       ;
+; Device Name        ; EP2C35F672C8                                     ;
+; Timing Models      ; Final                                            ;
+; Delay Model        ; Combined                                         ;
+; Rise/Fall Delays   ; Unavailable                                      ;
++--------------------+--------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 3           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-3 processors         ; < 0.1%      ;
+;     4 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; Term_4_2.sdc  ; OK     ; Fri Dec 07 20:14:11 2012 ;
++---------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 62.13 MHz ; 62.13 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------+
+; Slow Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 3.906 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.499 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; clk   ; 8.758 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                                                                             ;
++-------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                 ; To Node                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 3.906 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.010      ; 16.144     ;
+; 3.984 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.008      ; 16.064     ;
+; 4.266 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.008      ; 15.782     ;
+; 4.382 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.025      ; 15.683     ;
+; 4.460 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.023      ; 15.603     ;
+; 4.473 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.008      ; 15.575     ;
+; 4.583 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.016      ; 15.473     ;
+; 4.661 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.014      ; 15.393     ;
+; 4.742 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.023      ; 15.321     ;
+; 4.767 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.004      ; 15.277     ;
+; 4.817 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.024      ; 15.247     ;
+; 4.895 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.022      ; 15.167     ;
+; 4.925 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.010      ; 15.125     ;
+; 4.943 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.014      ; 15.111     ;
+; 4.949 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.023      ; 15.114     ;
+; 4.959 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[2]            ; clk          ; clk         ; 20.000       ; 0.010      ; 15.091     ;
+; 4.966 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.017      ; 15.091     ;
+; 4.971 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.024      ; 15.093     ;
+; 5.003 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.008      ; 15.045     ;
+; 5.020 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.017      ; 15.037     ;
+; 5.037 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[2]            ; clk          ; clk         ; 20.000       ; 0.008      ; 15.011     ;
+; 5.039 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.014      ; 15.015     ;
+; 5.044 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.015      ; 15.011     ;
+; 5.049 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.022      ; 15.013     ;
+; 5.071 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.008      ; 14.977     ;
+; 5.114 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[3]   ; clk          ; clk         ; 20.000       ; 0.011      ; 14.937     ;
+; 5.145 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.028      ; 14.923     ;
+; 5.150 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.014      ; 14.904     ;
+; 5.165 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.014      ; 14.889     ;
+; 5.177 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.022      ; 14.885     ;
+; 5.192 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[3]   ; clk          ; clk         ; 20.000       ; 0.009      ; 14.857     ;
+; 5.200 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.008      ; 14.848     ;
+; 5.223 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.026      ; 14.843     ;
+; 5.228 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.010      ; 14.822     ;
+; 5.243 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.019      ; 14.816     ;
+; 5.281 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.011      ; 14.770     ;
+; 5.285 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.008      ; 14.763     ;
+; 5.306 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.008      ; 14.742     ;
+; 5.319 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[2]            ; clk          ; clk         ; 20.000       ; 0.008      ; 14.729     ;
+; 5.326 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.015      ; 14.729     ;
+; 5.331 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.022      ; 14.731     ;
+; 5.356 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.025      ; 14.709     ;
+; 5.362 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.011      ; 14.689     ;
+; 5.374 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.016      ; 14.682     ;
+; 5.375 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.022      ; 14.687     ;
+; 5.381 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.008      ; 14.667     ;
+; 5.384 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.022      ; 14.678     ;
+; 5.403 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.018      ; 14.655     ;
+; 5.409 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.010      ; 14.641     ;
+; 5.422 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.015      ; 14.633     ;
+; 5.474 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[3]   ; clk          ; clk         ; 20.000       ; 0.009      ; 14.575     ;
+; 5.485 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][6] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.011      ; 14.566     ;
+; 5.492 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.008      ; 14.556     ;
+; 5.501 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.022      ; 14.561     ;
+; 5.505 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.026      ; 14.561     ;
+; 5.507 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.008      ; 14.541     ;
+; 5.510 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.025      ; 14.555     ;
+; 5.526 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[2]            ; clk          ; clk         ; 20.000       ; 0.008      ; 14.522     ;
+; 5.529 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.022      ; 14.533     ;
+; 5.533 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.015      ; 14.522     ;
+; 5.538 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.022      ; 14.524     ;
+; 5.547 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.023      ; 14.516     ;
+; 5.548 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.015      ; 14.507     ;
+; 5.558 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.026      ; 14.508     ;
+; 5.582 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.029      ; 14.487     ;
+; 5.588 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.008      ; 14.460     ;
+; 5.601 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.026      ; 14.465     ;
+; 5.655 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.022      ; 14.407     ;
+; 5.665 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.011      ; 14.386     ;
+; 5.676 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.023      ; 14.387     ;
+; 5.678 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.018      ; 14.380     ;
+; 5.681 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[3]   ; clk          ; clk         ; 20.000       ; 0.009      ; 14.368     ;
+; 5.684 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.008      ; 14.364     ;
+; 5.699 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[4]            ; clk          ; clk         ; 20.000       ; 0.017      ; 14.358     ;
+; 5.710 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.024      ; 14.354     ;
+; 5.712 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.026      ; 14.354     ;
+; 5.716 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.010      ; 14.334     ;
+; 5.727 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.026      ; 14.339     ;
+; 5.735 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[6]            ; clk          ; clk         ; 20.000       ; 0.016      ; 14.321     ;
+; 5.738 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][6] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.017      ; 14.319     ;
+; 5.757 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.017      ; 14.300     ;
+; 5.777 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[4]            ; clk          ; clk         ; 20.000       ; 0.015      ; 14.278     ;
+; 5.795 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.008      ; 14.253     ;
+; 5.810 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.008      ; 14.238     ;
+; 5.813 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[6]            ; clk          ; clk         ; 20.000       ; 0.014      ; 14.241     ;
+; 5.820 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[2]            ; clk          ; clk         ; 20.000       ; 0.004      ; 14.224     ;
+; 5.832 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.018      ; 14.226     ;
+; 5.834 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[1]            ; clk          ; clk         ; 20.000       ; 0.025      ; 14.231     ;
+; 5.835 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[3]            ; clk          ; clk         ; 20.000       ; 0.011      ; 14.216     ;
+; 5.837 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BCF_Q3                      ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[3][2] ; clk          ; clk         ; 20.000       ; 0.019      ; 14.222     ;
+; 5.864 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.024      ; 14.200     ;
+; 5.873 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BTFSC_Q3                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[3][2] ; clk          ; clk         ; 20.000       ; 0.019      ; 14.186     ;
+; 5.885 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.025      ; 14.180     ;
+; 5.912 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[1]            ; clk          ; clk         ; 20.000       ; 0.023      ; 14.151     ;
+; 5.913 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[3]            ; clk          ; clk         ; 20.000       ; 0.009      ; 14.136     ;
+; 5.936 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.028      ; 14.132     ;
+; 5.961 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][6] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.026      ; 14.105     ;
+; 5.975 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[3]   ; clk          ; clk         ; 20.000       ; 0.005      ; 14.070     ;
+; 6.019 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.010      ; 14.031     ;
+; 6.030 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BTFSS_Q3                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[3][2] ; clk          ; clk         ; 20.000       ; 0.019      ; 14.029     ;
++-------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                                                                                            ;
++-------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                        ; To Node                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.499 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[6][0]        ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[6][0]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|PCHOut[0]                ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|PCHOut[0]                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; PIC16C57:pic16C57|Datapath:DP|Register8Bit:trisB|out[0]                          ; PIC16C57:pic16C57|Datapath:DP|Register8Bit:trisB|out[0]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; MotorModule:motor|Motor:motor|currentState.IDLE                                  ; MotorModule:motor|Motor:motor|currentState.IDLE                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.739 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q3                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q4                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.045      ;
+; 0.742 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CALL_Q7                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CALL_Q8                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.048      ;
+; 0.743 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CLRF_Q3                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CLRF_Q4                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.049      ;
+; 0.744 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.IORWF_Q2                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.IORWF_Q3                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.050      ;
+; 0.745 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q3                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q4                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.051      ;
+; 0.745 ; MotorModule:motor|Clock50Hz:clock50Hz|count[27]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[27]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.051      ;
+; 0.746 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CLRW_Q2                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CLRW_Q3                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.052      ;
+; 0.748 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.MOVWF_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.MOVWF_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.054      ;
+; 0.749 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RRF_Q2                             ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RRF_Q3                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.055      ;
+; 0.749 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CLRF_Q2                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CLRF_Q3                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.055      ;
+; 0.749 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[10] ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[10] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.055      ;
+; 0.749 ; MotorModule:motor|Motor:motor|currentState.STATE4                                ; MotorModule:motor|Motor:motor|currentState.STATE1                                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.055      ;
+; 0.751 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCF_Q2                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCF_Q3                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.057      ;
+; 0.751 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.XORWF_Q2                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.XORWF_Q3                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.057      ;
+; 0.753 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[15]                              ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[15]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.059      ;
+; 0.754 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RLF_Q2                             ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RLF_Q3                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.060      ;
+; 0.754 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.OTHERS_Q2                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.OTHERS_Q3                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.060      ;
+; 0.757 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.SWAPF_Q2                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.SWAPF_Q3                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.063      ;
+; 0.764 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.DECFSZ_Q4                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.Q1                                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.070      ;
+; 0.765 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.DECFSZ_Q4                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.DECFSZ_Q5                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.071      ;
+; 0.911 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q4                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q5                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.217      ;
+; 0.916 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CALL_Q3                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CALL_Q4                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.222      ;
+; 0.919 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q2                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q3                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.225      ;
+; 0.922 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[10] ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[10] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.228      ;
+; 0.926 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[6]  ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.232      ;
+; 0.928 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.COMF_Q2                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.COMF_Q3                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.234      ;
+; 0.936 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.Q1                                 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.OTHERS_Q2                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.242      ;
+; 0.946 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q4                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q5                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.252      ;
+; 0.947 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q4                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.Q1                                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.253      ;
+; 0.995 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BTFSC_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BTFSC_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.301      ;
+; 1.041 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.IORWF_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.IORWF_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.347      ;
+; 1.045 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q2                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q3                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.351      ;
+; 1.047 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.SUBWF_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.SUBWF_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.353      ;
+; 1.055 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.COMF_Q3                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.COMF_Q4                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.361      ;
+; 1.060 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCF_Q3                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCF_Q4                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.366      ;
+; 1.073 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BSF_Q3                             ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BSF_Q4                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.379      ;
+; 1.079 ; PIC16C57:pic16C57|Datapath:DP|DataBus:databus|out[7]                             ; PIC16C57:pic16C57|Datapath:DP|Register8Bit:W|out[7]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.385      ;
+; 1.133 ; MotorModule:motor|Motor:motor|currentState.IDLE                                  ; MotorModule:motor|Motor:motor|currentState.STATE1                                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.439      ;
+; 1.160 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q4                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q5                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.466      ;
+; 1.166 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[6]  ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.472      ;
+; 1.166 ; MotorModule:motor|Clock50Hz:clock50Hz|count[14]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[14]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.472      ;
+; 1.166 ; MotorModule:motor|Motor:motor|currentState.STATE1                                ; MotorModule:motor|Motor:motor|currentState.STATE2                                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.472      ;
+; 1.167 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[7]  ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.473      ;
+; 1.167 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[0]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[0]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.473      ;
+; 1.170 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CALL_Q4                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CALL_Q5                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.476      ;
+; 1.170 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q7                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q8                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.476      ;
+; 1.175 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.TRIS_Q3                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.TRIS_Q4                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.481      ;
+; 1.175 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q7                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q8                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.481      ;
+; 1.175 ; MotorModule:motor|Motor:motor|currentState.STATE3                                ; MotorModule:motor|Motor:motor|currentState.STATE4                                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.481      ;
+; 1.175 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[1]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[1]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.481      ;
+; 1.176 ; MotorModule:motor|Clock50Hz:clock50Hz|count[7]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[7]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.176 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[2]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[2]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.176 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[9]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[9]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.176 ; PIC16C57:pic16C57|Datapath:DP|Register8Bit:W|out[0]                              ; PIC16C57:pic16C57|Datapath:DP|Register8Bit:trisB|out[0]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.177 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.XORWF_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.XORWF_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; MotorModule:motor|Clock50Hz:clock50Hz|count[13]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[13]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; MotorModule:motor|Clock50Hz:clock50Hz|count[21]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[21]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[4]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[4]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[7]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[7]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[11]                              ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[11]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[13]                              ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[13]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[14]                              ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[14]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.483      ;
+; 1.179 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[3][3]        ; PIC16C57:pic16C57|Datapath:DP|DataBus:databus|out[3]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.485      ;
+; 1.180 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.SUBWF_Q2                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.SUBWF_Q3                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.486      ;
+; 1.180 ; MotorModule:motor|Clock50Hz:clock50Hz|count[9]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[9]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.486      ;
+; 1.180 ; MotorModule:motor|Clock50Hz:clock50Hz|count[11]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[11]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.486      ;
+; 1.181 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[7]  ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.487      ;
+; 1.181 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.OTHERS_Q3                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.OTHERS_Q4                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.487      ;
+; 1.181 ; MotorModule:motor|Clock50Hz:clock50Hz|count[16]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[16]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.487      ;
+; 1.181 ; MotorModule:motor|Clock50Hz:clock50Hz|count[18]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[18]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.487      ;
+; 1.182 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[8]  ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.488      ;
+; 1.182 ; MotorModule:motor|Clock50Hz:clock50Hz|count[2]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[2]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.488      ;
+; 1.182 ; MotorModule:motor|Clock50Hz:clock50Hz|count[23]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[23]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.488      ;
+; 1.182 ; MotorModule:motor|Clock50Hz:clock50Hz|count[25]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[25]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.488      ;
+; 1.183 ; MotorModule:motor|Clock50Hz:clock50Hz|count[0]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[0]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.489      ;
+; 1.184 ; MotorModule:motor|Clock50Hz:clock50Hz|count[15]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[15]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.186 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.ANDWF_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.ANDWF_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.492      ;
+; 1.186 ; MotorModule:motor|Clock50Hz:clock50Hz|count[5]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[5]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.492      ;
+; 1.196 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q5                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q6                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.502      ;
+; 1.217 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q5                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q6                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.523      ;
+; 1.218 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.524      ;
+; 1.219 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.DECF_Q2                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.DECF_Q3                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.525      ;
+; 1.220 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                            ; PIC16C57:pic16C57|Datapath:DP|Register8Bit:W|out[3]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.526      ;
+; 1.224 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RRF_Q3                             ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RRF_Q4                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.530      ;
+; 1.225 ; MotorModule:motor|Clock50Hz:clock50Hz|count[20]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[20]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.531      ;
+; 1.225 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[3]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[3]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.531      ;
+; 1.225 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[8]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[8]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.531      ;
+; 1.225 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[10]                              ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[10]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.531      ;
+; 1.226 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[5]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[5]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.532      ;
+; 1.226 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[6]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[6]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.532      ;
+; 1.226 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[12]                              ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[12]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.532      ;
+; 1.228 ; MotorModule:motor|Motor:motor|currentState.STATE2                                ; MotorModule:motor|Motor:motor|currentState.STATE3                                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.534      ;
+; 1.229 ; MotorModule:motor|Clock50Hz:clock50Hz|count[6]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[6]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.535      ;
+; 1.229 ; MotorModule:motor|Clock50Hz:clock50Hz|count[17]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[17]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.535      ;
+; 1.230 ; MotorModule:motor|Clock50Hz:clock50Hz|count[8]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[8]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.536      ;
+; 1.230 ; MotorModule:motor|Clock50Hz:clock50Hz|count[19]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[19]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.536      ;
++-------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                                  ;
++-------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                 ;
++-------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------+
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[0]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[0]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[10]    ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[10]    ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[11]    ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[11]    ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[12]    ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[12]    ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[13]    ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[13]    ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[14]    ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[14]    ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[15]    ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[15]    ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[1]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[1]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[2]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[2]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[3]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[3]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[4]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[4]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[5]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[5]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[6]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[6]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[7]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[7]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[8]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[8]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[9]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[9]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[0]         ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[0]         ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[10]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[10]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[11]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[11]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[12]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[12]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[13]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[13]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[14]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[14]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[15]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[15]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[16]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[16]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[17]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[17]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[18]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[18]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[19]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[19]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[1]         ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[1]         ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[20]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[20]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[21]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[21]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[22]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[22]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[23]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[23]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[24]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[24]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[25]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[25]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[26]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[26]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[27]        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[27]        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[2]         ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[2]         ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[3]         ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[3]         ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[4]         ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[4]         ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[5]         ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[5]         ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[6]         ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[6]         ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[7]         ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[7]         ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[8]         ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[8]         ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[9]         ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[9]         ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.IDLE        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.IDLE        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE1      ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE1      ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE2      ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE2      ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE3      ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE3      ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE4      ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE4      ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk   ; Rise       ; PIC16C57:pic16C57|ControlUnit:CU|currentState.ADDWF_Q2 ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; PIC16C57:pic16C57|ControlUnit:CU|currentState.ADDWF_Q2 ;
++-------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rst       ; clk        ; 11.124 ; 11.124 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rst       ; clk        ; -4.048 ; -4.048 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Clock to Output Times                                                          ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; motorControl[*]  ; clk        ; 8.408  ; 8.408  ; Rise       ; clk             ;
+;  motorControl[0] ; clk        ; 8.408  ; 8.408  ; Rise       ; clk             ;
+;  motorControl[1] ; clk        ; 8.398  ; 8.398  ; Rise       ; clk             ;
+;  motorControl[2] ; clk        ; 7.687  ; 7.687  ; Rise       ; clk             ;
+;  motorControl[3] ; clk        ; 7.685  ; 7.685  ; Rise       ; clk             ;
+; out[*]           ; clk        ; 11.364 ; 11.364 ; Rise       ; clk             ;
+;  out[0]          ; clk        ; 10.041 ; 10.041 ; Rise       ; clk             ;
+;  out[1]          ; clk        ; 9.736  ; 9.736  ; Rise       ; clk             ;
+;  out[2]          ; clk        ; 10.416 ; 10.416 ; Rise       ; clk             ;
+;  out[3]          ; clk        ; 11.364 ; 11.364 ; Rise       ; clk             ;
+;  out[4]          ; clk        ; 11.295 ; 11.295 ; Rise       ; clk             ;
+;  out[5]          ; clk        ; 10.416 ; 10.416 ; Rise       ; clk             ;
+;  out[6]          ; clk        ; 10.138 ; 10.138 ; Rise       ; clk             ;
+;  out[7]          ; clk        ; 10.463 ; 10.463 ; Rise       ; clk             ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                  ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; motorControl[*]  ; clk        ; 7.685  ; 7.685  ; Rise       ; clk             ;
+;  motorControl[0] ; clk        ; 8.408  ; 8.408  ; Rise       ; clk             ;
+;  motorControl[1] ; clk        ; 8.398  ; 8.398  ; Rise       ; clk             ;
+;  motorControl[2] ; clk        ; 7.687  ; 7.687  ; Rise       ; clk             ;
+;  motorControl[3] ; clk        ; 7.685  ; 7.685  ; Rise       ; clk             ;
+; out[*]           ; clk        ; 9.736  ; 9.736  ; Rise       ; clk             ;
+;  out[0]          ; clk        ; 10.041 ; 10.041 ; Rise       ; clk             ;
+;  out[1]          ; clk        ; 9.736  ; 9.736  ; Rise       ; clk             ;
+;  out[2]          ; clk        ; 10.416 ; 10.416 ; Rise       ; clk             ;
+;  out[3]          ; clk        ; 11.364 ; 11.364 ; Rise       ; clk             ;
+;  out[4]          ; clk        ; 11.295 ; 11.295 ; Rise       ; clk             ;
+;  out[5]          ; clk        ; 10.416 ; 10.416 ; Rise       ; clk             ;
+;  out[6]          ; clk        ; 10.138 ; 10.138 ; Rise       ; clk             ;
+;  out[7]          ; clk        ; 10.463 ; 10.463 ; Rise       ; clk             ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Output Enable Times                                                   ;
++-----------+------------+--------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+------+------------+-----------------+
+; out[*]    ; clk        ; 9.212  ;      ; Rise       ; clk             ;
+;  out[0]   ; clk        ; 9.745  ;      ; Rise       ; clk             ;
+;  out[1]   ; clk        ; 9.212  ;      ; Rise       ; clk             ;
+;  out[2]   ; clk        ; 10.329 ;      ; Rise       ; clk             ;
+;  out[3]   ; clk        ; 10.449 ;      ; Rise       ; clk             ;
+;  out[4]   ; clk        ; 9.475  ;      ; Rise       ; clk             ;
+;  out[5]   ; clk        ; 10.836 ;      ; Rise       ; clk             ;
+;  out[6]   ; clk        ; 10.689 ;      ; Rise       ; clk             ;
+;  out[7]   ; clk        ; 9.242  ;      ; Rise       ; clk             ;
++-----------+------------+--------+------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Output Enable Times                                           ;
++-----------+------------+--------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+------+------------+-----------------+
+; out[*]    ; clk        ; 9.212  ;      ; Rise       ; clk             ;
+;  out[0]   ; clk        ; 9.745  ;      ; Rise       ; clk             ;
+;  out[1]   ; clk        ; 9.212  ;      ; Rise       ; clk             ;
+;  out[2]   ; clk        ; 10.329 ;      ; Rise       ; clk             ;
+;  out[3]   ; clk        ; 10.449 ;      ; Rise       ; clk             ;
+;  out[4]   ; clk        ; 9.475  ;      ; Rise       ; clk             ;
+;  out[5]   ; clk        ; 10.836 ;      ; Rise       ; clk             ;
+;  out[6]   ; clk        ; 10.689 ;      ; Rise       ; clk             ;
+;  out[7]   ; clk        ; 9.242  ;      ; Rise       ; clk             ;
++-----------+------------+--------+------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Output Disable Times                                                          ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; out[*]    ; clk        ; 9.212     ;           ; Rise       ; clk             ;
+;  out[0]   ; clk        ; 9.745     ;           ; Rise       ; clk             ;
+;  out[1]   ; clk        ; 9.212     ;           ; Rise       ; clk             ;
+;  out[2]   ; clk        ; 10.329    ;           ; Rise       ; clk             ;
+;  out[3]   ; clk        ; 10.449    ;           ; Rise       ; clk             ;
+;  out[4]   ; clk        ; 9.475     ;           ; Rise       ; clk             ;
+;  out[5]   ; clk        ; 10.836    ;           ; Rise       ; clk             ;
+;  out[6]   ; clk        ; 10.689    ;           ; Rise       ; clk             ;
+;  out[7]   ; clk        ; 9.242     ;           ; Rise       ; clk             ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                  ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; out[*]    ; clk        ; 9.212     ;           ; Rise       ; clk             ;
+;  out[0]   ; clk        ; 9.745     ;           ; Rise       ; clk             ;
+;  out[1]   ; clk        ; 9.212     ;           ; Rise       ; clk             ;
+;  out[2]   ; clk        ; 10.329    ;           ; Rise       ; clk             ;
+;  out[3]   ; clk        ; 10.449    ;           ; Rise       ; clk             ;
+;  out[4]   ; clk        ; 9.475     ;           ; Rise       ; clk             ;
+;  out[5]   ; clk        ; 10.836    ;           ; Rise       ; clk             ;
+;  out[6]   ; clk        ; 10.689    ;           ; Rise       ; clk             ;
+;  out[7]   ; clk        ; 9.242     ;           ; Rise       ; clk             ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; 15.185 ; 0.000         ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; clk   ; 9.000 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                                                                              ;
++--------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                 ; To Node                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 15.185 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.009      ; 4.856      ;
+; 15.218 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.008      ; 4.822      ;
+; 15.271 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.008      ; 4.769      ;
+; 15.333 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.012      ; 4.711      ;
+; 15.334 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.023      ; 4.721      ;
+; 15.366 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.011      ; 4.677      ;
+; 15.367 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.022      ; 4.687      ;
+; 15.370 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.008      ; 4.670      ;
+; 15.387 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.009      ; 4.654      ;
+; 15.419 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.011      ; 4.624      ;
+; 15.420 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.022      ; 4.634      ;
+; 15.420 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.008      ; 4.620      ;
+; 15.428 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.004      ; 4.608      ;
+; 15.442 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.016      ; 4.606      ;
+; 15.459 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.011      ; 4.584      ;
+; 15.473 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.008      ; 4.567      ;
+; 15.487 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.022      ; 4.567      ;
+; 15.487 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.022      ; 4.567      ;
+; 15.494 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.014      ; 4.552      ;
+; 15.496 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.013      ; 4.549      ;
+; 15.504 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.011      ; 4.539      ;
+; 15.507 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.008      ; 4.533      ;
+; 15.513 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.008      ; 4.527      ;
+; 15.514 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.013      ; 4.531      ;
+; 15.518 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.011      ; 4.525      ;
+; 15.519 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.022      ; 4.535      ;
+; 15.520 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.021      ; 4.533      ;
+; 15.520 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.021      ; 4.533      ;
+; 15.522 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.009      ; 4.519      ;
+; 15.527 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.013      ; 4.518      ;
+; 15.530 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[2]            ; clk          ; clk         ; 20.000       ; 0.009      ; 4.511      ;
+; 15.546 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.024      ; 4.510      ;
+; 15.546 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[3]   ; clk          ; clk         ; 20.000       ; 0.010      ; 4.496      ;
+; 15.555 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.008      ; 4.485      ;
+; 15.556 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.008      ; 4.484      ;
+; 15.558 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.008      ; 4.482      ;
+; 15.563 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[2]            ; clk          ; clk         ; 20.000       ; 0.008      ; 4.477      ;
+; 15.567 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.012      ; 4.477      ;
+; 15.572 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.008      ; 4.468      ;
+; 15.573 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.021      ; 4.480      ;
+; 15.573 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.021      ; 4.480      ;
+; 15.577 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.018      ; 4.473      ;
+; 15.579 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.023      ; 4.476      ;
+; 15.579 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[3]   ; clk          ; clk         ; 20.000       ; 0.009      ; 4.462      ;
+; 15.580 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.013      ; 4.465      ;
+; 15.596 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.026      ; 4.462      ;
+; 15.596 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.026      ; 4.462      ;
+; 15.603 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.018      ; 4.447      ;
+; 15.607 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.027      ; 4.452      ;
+; 15.608 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.008      ; 4.432      ;
+; 15.613 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.021      ; 4.440      ;
+; 15.613 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.021      ; 4.440      ;
+; 15.615 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][6] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.013      ; 4.430      ;
+; 15.616 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[2]            ; clk          ; clk         ; 20.000       ; 0.008      ; 4.424      ;
+; 15.619 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[2]   ; clk          ; clk         ; 20.000       ; 0.009      ; 4.422      ;
+; 15.620 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.013      ; 4.425      ;
+; 15.621 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.009      ; 4.420      ;
+; 15.624 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.022      ; 4.430      ;
+; 15.631 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.013      ; 4.414      ;
+; 15.632 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.023      ; 4.423      ;
+; 15.632 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[3]   ; clk          ; clk         ; 20.000       ; 0.009      ; 4.409      ;
+; 15.648 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.008      ; 4.392      ;
+; 15.655 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][5] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.028      ; 4.405      ;
+; 15.658 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.021      ; 4.395      ;
+; 15.658 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.021      ; 4.395      ;
+; 15.665 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.013      ; 4.380      ;
+; 15.669 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.022      ; 4.385      ;
+; 15.672 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.021      ; 4.381      ;
+; 15.672 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.021      ; 4.381      ;
+; 15.672 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[4]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.023      ; 4.383      ;
+; 15.679 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.013      ; 4.366      ;
+; 15.683 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BCF_Q3                      ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[3][2] ; clk          ; clk         ; 20.000       ; 0.017      ; 4.366      ;
+; 15.688 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][6] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.016      ; 4.360      ;
+; 15.693 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.008      ; 4.347      ;
+; 15.696 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BTFSC_Q3                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[3][2] ; clk          ; clk         ; 20.000       ; 0.017      ; 4.353      ;
+; 15.707 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.008      ; 4.333      ;
+; 15.708 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[6]            ; clk          ; clk         ; 20.000       ; 0.012      ; 4.336      ;
+; 15.715 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[2]            ; clk          ; clk         ; 20.000       ; 0.008      ; 4.325      ;
+; 15.717 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[2]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.023      ; 4.338      ;
+; 15.721 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.022      ; 4.333      ;
+; 15.721 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.022      ; 4.333      ;
+; 15.728 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[4]   ; clk          ; clk         ; 20.000       ; 0.014      ; 4.318      ;
+; 15.731 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.023      ; 4.324      ;
+; 15.731 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[1]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[3]   ; clk          ; clk         ; 20.000       ; 0.009      ; 4.310      ;
+; 15.732 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.023      ; 4.323      ;
+; 15.741 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[6]            ; clk          ; clk         ; 20.000       ; 0.011      ; 4.302      ;
+; 15.742 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][6] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[5]   ; clk          ; clk         ; 20.000       ; 0.013      ; 4.303      ;
+; 15.750 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[4]            ; clk          ; clk         ; 20.000       ; 0.014      ; 4.296      ;
+; 15.754 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[6]   ; clk          ; clk         ; 20.000       ; 0.007      ; 4.285      ;
+; 15.756 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[5]            ; clk          ; clk         ; 20.000       ; 0.009      ; 4.285      ;
+; 15.759 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[0]   ; clk          ; clk         ; 20.000       ; 0.017      ; 4.290      ;
+; 15.759 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[0]            ; clk          ; clk         ; 20.000       ; 0.017      ; 4.290      ;
+; 15.764 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][6] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[1]   ; clk          ; clk         ; 20.000       ; 0.027      ; 4.295      ;
+; 15.768 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BTFSS_Q3                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[3][2] ; clk          ; clk         ; 20.000       ; 0.017      ; 4.281      ;
+; 15.773 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[2]            ; clk          ; clk         ; 20.000       ; 0.004      ; 4.263      ;
+; 15.780 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[0]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[7]   ; clk          ; clk         ; 20.000       ; 0.024      ; 4.276      ;
+; 15.782 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[10]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[1]            ; clk          ; clk         ; 20.000       ; 0.023      ; 4.273      ;
+; 15.783 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[11]                    ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[4]            ; clk          ; clk         ; 20.000       ; 0.013      ; 4.262      ;
+; 15.789 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[4][4] ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|currentState[3]   ; clk          ; clk         ; 20.000       ; 0.005      ; 4.248      ;
+; 15.794 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                     ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|out[6]            ; clk          ; clk         ; 20.000       ; 0.011      ; 4.249      ;
++--------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                                                                                            ;
++-------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                        ; To Node                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[6][0]        ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[6][0]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|PCHOut[0]                ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|PCHOut[0]                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; PIC16C57:pic16C57|Datapath:DP|Register8Bit:trisB|out[0]                          ; PIC16C57:pic16C57|Datapath:DP|Register8Bit:trisB|out[0]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MotorModule:motor|Motor:motor|currentState.IDLE                                  ; MotorModule:motor|Motor:motor|currentState.IDLE                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.238 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q3                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q4                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.390      ;
+; 0.239 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q3                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q4                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CLRF_Q3                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CLRF_Q4                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.391      ;
+; 0.240 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RRF_Q2                             ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RRF_Q3                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.392      ;
+; 0.240 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CALL_Q7                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CALL_Q8                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.392      ;
+; 0.240 ; MotorModule:motor|Clock50Hz:clock50Hz|count[27]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[27]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.392      ;
+; 0.241 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.IORWF_Q2                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.IORWF_Q3                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CLRW_Q2                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CLRW_Q3                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.MOVWF_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.MOVWF_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241 ; MotorModule:motor|Motor:motor|currentState.STATE4                                ; MotorModule:motor|Motor:motor|currentState.STATE1                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.XORWF_Q2                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.XORWF_Q3                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.394      ;
+; 0.243 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CLRF_Q2                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CLRF_Q3                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[15]                              ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[15]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.245 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCF_Q2                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCF_Q3                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.245 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[10] ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[10] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.247 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.SWAPF_Q2                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.SWAPF_Q3                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.247 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.OTHERS_Q2                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.OTHERS_Q3                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.248 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RLF_Q2                             ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RLF_Q3                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.400      ;
+; 0.249 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.DECFSZ_Q4                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.Q1                                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.401      ;
+; 0.250 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.DECFSZ_Q4                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.DECFSZ_Q5                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.402      ;
+; 0.299 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.Q1                                 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.OTHERS_Q2                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.451      ;
+; 0.304 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q4                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.Q1                                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.456      ;
+; 0.313 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q4                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q5                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.465      ;
+; 0.315 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CALL_Q3                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CALL_Q4                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.467      ;
+; 0.316 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q2                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q3                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.468      ;
+; 0.319 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[10] ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[10] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.471      ;
+; 0.319 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.IORWF_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.IORWF_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.471      ;
+; 0.320 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[6]  ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.472      ;
+; 0.320 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q2                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q3                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.472      ;
+; 0.322 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.SUBWF_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.SUBWF_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.474      ;
+; 0.324 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.COMF_Q2                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.COMF_Q3                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.476      ;
+; 0.326 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.COMF_Q3                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.COMF_Q4                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.478      ;
+; 0.326 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BTFSC_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BTFSC_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.478      ;
+; 0.328 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCF_Q3                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCF_Q4                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.480      ;
+; 0.329 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q4                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.INCFSZ_Q5                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.481      ;
+; 0.335 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BSF_Q3                             ; PIC16C57:pic16C57|ControlUnit:CU|currentState.BSF_Q4                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.487      ;
+; 0.339 ; PIC16C57:pic16C57|Datapath:DP|DataBus:databus|out[7]                             ; PIC16C57:pic16C57|Datapath:DP|Register8Bit:W|out[7]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.491      ;
+; 0.355 ; MotorModule:motor|Clock50Hz:clock50Hz|count[14]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[14]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[0]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[0]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.357 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[6]  ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.359 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[1]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[1]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; MotorModule:motor|Motor:motor|currentState.IDLE                                  ; MotorModule:motor|Motor:motor|currentState.STATE1                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; MotorModule:motor|Clock50Hz:clock50Hz|count[7]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[7]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[2]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[2]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[9]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[9]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[11]                              ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[11]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q4                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q5                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; MotorModule:motor|Clock50Hz:clock50Hz|count[13]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[13]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; MotorModule:motor|Motor:motor|currentState.STATE1                                ; MotorModule:motor|Motor:motor|currentState.STATE2                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[4]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[4]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[7]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[7]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[13]                              ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[13]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[14]                              ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[14]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; PIC16C57:pic16C57|Datapath:DP|Register8Bit:W|out[0]                              ; PIC16C57:pic16C57|Datapath:DP|Register8Bit:trisB|out[0]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; MotorModule:motor|Clock50Hz:clock50Hz|count[9]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[9]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.514      ;
+; 0.362 ; MotorModule:motor|Clock50Hz:clock50Hz|count[11]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[11]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[7]  ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; MotorModule:motor|Clock50Hz:clock50Hz|count[15]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[15]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; MotorModule:motor|Clock50Hz:clock50Hz|count[16]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[16]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; MotorModule:motor|Clock50Hz:clock50Hz|count[18]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[18]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; MotorModule:motor|Clock50Hz:clock50Hz|count[21]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[21]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q7                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.GOTO_Q8                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.516      ;
+; 0.364 ; MotorModule:motor|Clock50Hz:clock50Hz|count[23]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[23]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.516      ;
+; 0.365 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CALL_Q4                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.CALL_Q5                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; MotorModule:motor|Clock50Hz:clock50Hz|count[2]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[2]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; MotorModule:motor|Clock50Hz:clock50Hz|count[5]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[5]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; MotorModule:motor|Clock50Hz:clock50Hz|count[25]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[25]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; MotorModule:motor|Motor:motor|currentState.STATE3                                ; MotorModule:motor|Motor:motor|currentState.STATE4                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.517      ;
+; 0.366 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.XORWF_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.XORWF_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; MotorModule:motor|Clock50Hz:clock50Hz|count[0]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[0]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.367 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[3][3]        ; PIC16C57:pic16C57|Datapath:DP|DataBus:databus|out[3]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.TRIS_Q3                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.TRIS_Q4                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q7                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q8                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.368 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[7]  ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.369 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.SUBWF_Q2                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.SUBWF_Q3                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level1|out[8]  ; PIC16C57:pic16C57|Datapath:DP|Stack:pic_stack|Register11Bit:stack_level2|out[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.OTHERS_Q3                          ; PIC16C57:pic16C57|ControlUnit:CU|currentState.OTHERS_Q4                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[3]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[3]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[8]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[8]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[10]                              ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[10]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.ANDWF_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.ANDWF_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[5]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[5]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[6]                               ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[6]                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[12]                              ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[12]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.373 ; MotorModule:motor|Clock50Hz:clock50Hz|count[6]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[6]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373 ; MotorModule:motor|Clock50Hz:clock50Hz|count[17]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[17]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374 ; PIC16C57:pic16C57|Datapath:DP|RegisterFile:registerFile|memoryArray[3][2]        ; PIC16C57:pic16C57|Datapath:DP|DataBus:databus|out[2]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; MotorModule:motor|Clock50Hz:clock50Hz|count[8]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[8]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; MotorModule:motor|Clock50Hz:clock50Hz|count[20]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[20]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; MotorModule:motor|Clock50Hz:clock50Hz|count[19]                                  ; MotorModule:motor|Clock50Hz:clock50Hz|count[19]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.375 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q3                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q4                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; PIC16C57:pic16C57|Datapath:DP|Register12Bit:IR|out[3]                            ; PIC16C57:pic16C57|Datapath:DP|Register8Bit:W|out[3]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q5                           ; PIC16C57:pic16C57|ControlUnit:CU|currentState.RETLW_Q6                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; PIC16C57:pic16C57|ControlUnit:CU|currentState.DECF_Q2                            ; PIC16C57:pic16C57|ControlUnit:CU|currentState.DECF_Q3                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; MotorModule:motor|Clock50Hz:clock50Hz|count[1]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[1]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; MotorModule:motor|Clock50Hz:clock50Hz|count[3]                                   ; MotorModule:motor|Clock50Hz:clock50Hz|count[3]                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.528      ;
++-------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                                  ;
++-------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                 ;
++-------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------+
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[0]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[0]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[10]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[10]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[11]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[11]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[12]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[12]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[13]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[13]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[14]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[14]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[15]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[15]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[1]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[1]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[2]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[2]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[3]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[3]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[4]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[4]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[5]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[5]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[6]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[6]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[7]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[7]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[8]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[8]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[9]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; KeyPadModule:keypad|Clock100Hz:clock100Hz|count[9]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[0]         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[0]         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[10]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[10]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[11]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[11]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[12]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[12]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[13]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[13]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[14]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[14]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[15]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[15]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[16]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[16]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[17]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[17]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[18]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[18]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[19]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[19]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[1]         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[1]         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[20]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[20]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[21]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[21]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[22]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[22]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[23]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[23]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[24]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[24]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[25]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[25]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[26]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[26]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[27]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[27]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[2]         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[2]         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[3]         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[3]         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[4]         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[4]         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[5]         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[5]         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[6]         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[6]         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[7]         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[7]         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[8]         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[8]         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[9]         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Clock50Hz:clock50Hz|count[9]         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.IDLE        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.IDLE        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE1      ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE1      ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE2      ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE2      ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE3      ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE3      ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE4      ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; MotorModule:motor|Motor:motor|currentState.STATE4      ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PIC16C57:pic16C57|ControlUnit:CU|currentState.ADDWF_Q2 ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PIC16C57:pic16C57|ControlUnit:CU|currentState.ADDWF_Q2 ;
++-------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rst       ; clk        ; 4.209 ; 4.209 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rst       ; clk        ; -1.822 ; -1.822 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; motorControl[*]  ; clk        ; 3.876 ; 3.876 ; Rise       ; clk             ;
+;  motorControl[0] ; clk        ; 3.876 ; 3.876 ; Rise       ; clk             ;
+;  motorControl[1] ; clk        ; 3.866 ; 3.866 ; Rise       ; clk             ;
+;  motorControl[2] ; clk        ; 3.663 ; 3.663 ; Rise       ; clk             ;
+;  motorControl[3] ; clk        ; 3.663 ; 3.663 ; Rise       ; clk             ;
+; out[*]           ; clk        ; 5.027 ; 5.027 ; Rise       ; clk             ;
+;  out[0]          ; clk        ; 4.416 ; 4.416 ; Rise       ; clk             ;
+;  out[1]          ; clk        ; 4.344 ; 4.344 ; Rise       ; clk             ;
+;  out[2]          ; clk        ; 4.531 ; 4.531 ; Rise       ; clk             ;
+;  out[3]          ; clk        ; 5.027 ; 5.027 ; Rise       ; clk             ;
+;  out[4]          ; clk        ; 4.865 ; 4.865 ; Rise       ; clk             ;
+;  out[5]          ; clk        ; 4.630 ; 4.630 ; Rise       ; clk             ;
+;  out[6]          ; clk        ; 4.468 ; 4.468 ; Rise       ; clk             ;
+;  out[7]          ; clk        ; 4.565 ; 4.565 ; Rise       ; clk             ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; motorControl[*]  ; clk        ; 3.663 ; 3.663 ; Rise       ; clk             ;
+;  motorControl[0] ; clk        ; 3.876 ; 3.876 ; Rise       ; clk             ;
+;  motorControl[1] ; clk        ; 3.866 ; 3.866 ; Rise       ; clk             ;
+;  motorControl[2] ; clk        ; 3.663 ; 3.663 ; Rise       ; clk             ;
+;  motorControl[3] ; clk        ; 3.663 ; 3.663 ; Rise       ; clk             ;
+; out[*]           ; clk        ; 4.344 ; 4.344 ; Rise       ; clk             ;
+;  out[0]          ; clk        ; 4.416 ; 4.416 ; Rise       ; clk             ;
+;  out[1]          ; clk        ; 4.344 ; 4.344 ; Rise       ; clk             ;
+;  out[2]          ; clk        ; 4.531 ; 4.531 ; Rise       ; clk             ;
+;  out[3]          ; clk        ; 5.027 ; 5.027 ; Rise       ; clk             ;
+;  out[4]          ; clk        ; 4.865 ; 4.865 ; Rise       ; clk             ;
+;  out[5]          ; clk        ; 4.630 ; 4.630 ; Rise       ; clk             ;
+;  out[6]          ; clk        ; 4.468 ; 4.468 ; Rise       ; clk             ;
+;  out[7]          ; clk        ; 4.565 ; 4.565 ; Rise       ; clk             ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------+
+; Output Enable Times                                                  ;
++-----------+------------+-------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+------+------------+-----------------+
+; out[*]    ; clk        ; 4.188 ;      ; Rise       ; clk             ;
+;  out[0]   ; clk        ; 4.353 ;      ; Rise       ; clk             ;
+;  out[1]   ; clk        ; 4.188 ;      ; Rise       ; clk             ;
+;  out[2]   ; clk        ; 4.485 ;      ; Rise       ; clk             ;
+;  out[3]   ; clk        ; 4.566 ;      ; Rise       ; clk             ;
+;  out[4]   ; clk        ; 4.282 ;      ; Rise       ; clk             ;
+;  out[5]   ; clk        ; 4.896 ;      ; Rise       ; clk             ;
+;  out[6]   ; clk        ; 4.597 ;      ; Rise       ; clk             ;
+;  out[7]   ; clk        ; 4.207 ;      ; Rise       ; clk             ;
++-----------+------------+-------+------+------------+-----------------+
+
+
++----------------------------------------------------------------------+
+; Minimum Output Enable Times                                          ;
++-----------+------------+-------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+------+------------+-----------------+
+; out[*]    ; clk        ; 4.188 ;      ; Rise       ; clk             ;
+;  out[0]   ; clk        ; 4.353 ;      ; Rise       ; clk             ;
+;  out[1]   ; clk        ; 4.188 ;      ; Rise       ; clk             ;
+;  out[2]   ; clk        ; 4.485 ;      ; Rise       ; clk             ;
+;  out[3]   ; clk        ; 4.566 ;      ; Rise       ; clk             ;
+;  out[4]   ; clk        ; 4.282 ;      ; Rise       ; clk             ;
+;  out[5]   ; clk        ; 4.896 ;      ; Rise       ; clk             ;
+;  out[6]   ; clk        ; 4.597 ;      ; Rise       ; clk             ;
+;  out[7]   ; clk        ; 4.207 ;      ; Rise       ; clk             ;
++-----------+------------+-------+------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Output Disable Times                                                          ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; out[*]    ; clk        ; 4.188     ;           ; Rise       ; clk             ;
+;  out[0]   ; clk        ; 4.353     ;           ; Rise       ; clk             ;
+;  out[1]   ; clk        ; 4.188     ;           ; Rise       ; clk             ;
+;  out[2]   ; clk        ; 4.485     ;           ; Rise       ; clk             ;
+;  out[3]   ; clk        ; 4.566     ;           ; Rise       ; clk             ;
+;  out[4]   ; clk        ; 4.282     ;           ; Rise       ; clk             ;
+;  out[5]   ; clk        ; 4.896     ;           ; Rise       ; clk             ;
+;  out[6]   ; clk        ; 4.597     ;           ; Rise       ; clk             ;
+;  out[7]   ; clk        ; 4.207     ;           ; Rise       ; clk             ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                  ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; out[*]    ; clk        ; 4.188     ;           ; Rise       ; clk             ;
+;  out[0]   ; clk        ; 4.353     ;           ; Rise       ; clk             ;
+;  out[1]   ; clk        ; 4.188     ;           ; Rise       ; clk             ;
+;  out[2]   ; clk        ; 4.485     ;           ; Rise       ; clk             ;
+;  out[3]   ; clk        ; 4.566     ;           ; Rise       ; clk             ;
+;  out[4]   ; clk        ; 4.282     ;           ; Rise       ; clk             ;
+;  out[5]   ; clk        ; 4.896     ;           ; Rise       ; clk             ;
+;  out[6]   ; clk        ; 4.597     ;           ; Rise       ; clk             ;
+;  out[7]   ; clk        ; 4.207     ;           ; Rise       ; clk             ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 3.906 ; 0.215 ; N/A      ; N/A     ; 8.758               ;
+;  clk             ; 3.906 ; 0.215 ; N/A      ; N/A     ; 8.758               ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+-------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rst       ; clk        ; 11.124 ; 11.124 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rst       ; clk        ; -1.822 ; -1.822 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Clock to Output Times                                                          ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; motorControl[*]  ; clk        ; 8.408  ; 8.408  ; Rise       ; clk             ;
+;  motorControl[0] ; clk        ; 8.408  ; 8.408  ; Rise       ; clk             ;
+;  motorControl[1] ; clk        ; 8.398  ; 8.398  ; Rise       ; clk             ;
+;  motorControl[2] ; clk        ; 7.687  ; 7.687  ; Rise       ; clk             ;
+;  motorControl[3] ; clk        ; 7.685  ; 7.685  ; Rise       ; clk             ;
+; out[*]           ; clk        ; 11.364 ; 11.364 ; Rise       ; clk             ;
+;  out[0]          ; clk        ; 10.041 ; 10.041 ; Rise       ; clk             ;
+;  out[1]          ; clk        ; 9.736  ; 9.736  ; Rise       ; clk             ;
+;  out[2]          ; clk        ; 10.416 ; 10.416 ; Rise       ; clk             ;
+;  out[3]          ; clk        ; 11.364 ; 11.364 ; Rise       ; clk             ;
+;  out[4]          ; clk        ; 11.295 ; 11.295 ; Rise       ; clk             ;
+;  out[5]          ; clk        ; 10.416 ; 10.416 ; Rise       ; clk             ;
+;  out[6]          ; clk        ; 10.138 ; 10.138 ; Rise       ; clk             ;
+;  out[7]          ; clk        ; 10.463 ; 10.463 ; Rise       ; clk             ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; motorControl[*]  ; clk        ; 3.663 ; 3.663 ; Rise       ; clk             ;
+;  motorControl[0] ; clk        ; 3.876 ; 3.876 ; Rise       ; clk             ;
+;  motorControl[1] ; clk        ; 3.866 ; 3.866 ; Rise       ; clk             ;
+;  motorControl[2] ; clk        ; 3.663 ; 3.663 ; Rise       ; clk             ;
+;  motorControl[3] ; clk        ; 3.663 ; 3.663 ; Rise       ; clk             ;
+; out[*]           ; clk        ; 4.344 ; 4.344 ; Rise       ; clk             ;
+;  out[0]          ; clk        ; 4.416 ; 4.416 ; Rise       ; clk             ;
+;  out[1]          ; clk        ; 4.344 ; 4.344 ; Rise       ; clk             ;
+;  out[2]          ; clk        ; 4.531 ; 4.531 ; Rise       ; clk             ;
+;  out[3]          ; clk        ; 5.027 ; 5.027 ; Rise       ; clk             ;
+;  out[4]          ; clk        ; 4.865 ; 4.865 ; Rise       ; clk             ;
+;  out[5]          ; clk        ; 4.630 ; 4.630 ; Rise       ; clk             ;
+;  out[6]          ; clk        ; 4.468 ; 4.468 ; Rise       ; clk             ;
+;  out[7]          ; clk        ; 4.565 ; 4.565 ; Rise       ; clk             ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 140038   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 140038   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 1     ; 1    ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 920   ; 920  ;
+; Unconstrained Output Ports      ; 15    ; 15   ;
+; Unconstrained Output Port Paths ; 24    ; 24   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
+    Info: Processing started: Fri Dec 07 20:14:08 2012
+Info: Command: quartus_sta Term_4_2 -c Term_4_2
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'Term_4_2.sdc'
+Warning (332060): Node: KeyPadModule:keypad|Clock100Hz:clock100Hz|count[0] was determined to be a clock but was found without an associated clock assignment.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is 3.906
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     3.906         0.000 clk 
+Info (332146): Worst-case hold slack is 0.499
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.499         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 8.758
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     8.758         0.000 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Warning (332060): Node: KeyPadModule:keypad|Clock100Hz:clock100Hz|count[0] was determined to be a clock but was found without an associated clock assignment.
+Info (332146): Worst-case setup slack is 15.185
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    15.185         0.000 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     9.000         0.000 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 372 megabytes
+    Info: Processing ended: Fri Dec 07 20:14:12 2012
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+

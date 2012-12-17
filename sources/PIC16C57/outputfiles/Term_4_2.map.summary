@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Dec 07 20:13:43 2012
+Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
+Revision Name : Term_4_2
+Top-level Entity Name : DoorLock
+Family : Cyclone II
+Total logic elements : 1,963
+    Total combinational functions : 1,340
+    Dedicated logic registers : 896
+Total registers : 896
+Total pins : 21
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
